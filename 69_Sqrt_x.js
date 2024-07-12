@@ -1,4 +1,5 @@
 
+// Binary Search
 var mySqrt = function(x) {
     let left = 0;
     let right = x;
@@ -16,3 +17,15 @@ var mySqrt = function(x) {
 
     return left - 1;
 };
+
+// Brute Force
+var mySqrt2 = function(x) {
+    let i = 0;
+    while(i<x){
+        if(i*i === x) return i;
+        if(i*i > x) return i-1;
+        i++;
+    }
+};
+
+console.log(mySqrt2(8))
